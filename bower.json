@@ -1,6 +1,6 @@
 {
-  "name": "watcher",
-  "title": "watcher",
+  "name": "watcher-pubsub",
+  "title": "watcher-pubsub",
   "description": "A small Pub/Sub library for implementing broadcasters in jQuery",
   "keywords": [
     "pubsub",
