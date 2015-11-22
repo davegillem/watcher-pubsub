@@ -1,0 +1,28 @@
+{
+  "name": "watcher",
+  "title": "watcher",
+  "description": "A small Pub/Sub library for implementing broadcasters in jQuery",
+  "keywords": [
+    "pubsub",
+    "broadcaster",
+    "watcher",
+    "subscribe"
+  ],
+  "version": "1.10",
+  "author": {
+    "name": "Dave Gillem",
+    "url": "http://davegillem.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/davegillem/watcher/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/davegillem/watcher/issues",
+  "download": "http://github.com/davegillem/jquery.watcher.js",
+  "dependencies": {
+    "jquery": ">=1.8"
+  },
+  "main": "watcher.js"
+}
