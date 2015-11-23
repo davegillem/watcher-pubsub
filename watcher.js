@@ -1,5 +1,5 @@
  /*
- * Watcher v1.2.0 - 11-23-2015, https://github.com/davegillem/watcher-pubsub
+ * Watcher v1.2.1 - 11-23-2015, https://github.com/davegillem/watcher-pubsub
  * ===================================
  * A jQuery plugin for enabling publish/subscribe (Observer) functionality
  *
