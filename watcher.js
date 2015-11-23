@@ -1,5 +1,5 @@
 /*
- * Watcher v1.2 - 11-23-2015
+ * Watcher v1.2.0 - 11-23-2015
  * A jQuery plugin for enabling publish/subscribe (Observer) functionality
  *
  * Copyright 2015 Dave Gillem; MIT Licensed
