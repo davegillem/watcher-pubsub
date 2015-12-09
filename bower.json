@@ -1,6 +1,6 @@
 {
   "name": "watcher-pubsub",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "title": "watcher-pubsub",
   "description": "A small Pub/Sub library for implementing broadcasters in jQuery",
   "keywords": [
@@ -24,8 +24,7 @@
   ],
   "ignore": [
     ".gitignore",
-    "CHANGELOG.md",
-    "README.md"
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "jquery": ">=1.8"

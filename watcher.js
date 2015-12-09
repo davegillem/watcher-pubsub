@@ -1,5 +1,5 @@
  /*
- * Watcher v1.2.1 - 11-23-2015, https://github.com/davegillem/watcher-pubsub
+ * Watcher v1.2.2 - 12-09-2015, https://github.com/davegillem/watcher-pubsub
  * ===================================
  * A jQuery plugin for enabling publish/subscribe (Observer) functionality
  *
@@ -20,7 +20,7 @@
 
 			var whichWatcher, watcherRef,
 				isCopy = false,
-				currEvent = watchers[event];
+				currEvent = watchers[event] || [];
 			// check for duplicates
 			for(var i=0, loopcount=currEvent.length; i<loopcount; i++){
 				whichWatcher = currEvent[i];
@@ -42,7 +42,7 @@
 	    _removeWatcher		= function(event, id) {
 			var whichWatcher,
 				isRemoved = false,
-				currEvent = watchers[event];
+				currEvent = watchers[event] || [];
 			for(var i=0, loopcount=currEvent.length; i<loopcount; i++){
 				whichWatcher = currEvent[i];
 				if(whichWatcher.id == id) {
@@ -58,7 +58,12 @@
 		_notifyWatchers		= function(event, data) {
 			var whichEvent = watchers[event];
 			if(whichEvent){
+/*
 				whichEvent && $.each(whichEvent, function() {
+					this.callback.call($, data);
+				});
+*/
+				$.each(whichEvent, function() {
 					this.callback.call($, data);
 				});
 			}
