@@ -19,10 +19,11 @@
 			}
 
 			var whichWatcher, watcherRef,
-				isCopy = false,
-				currEvent = watchers[event] || [];
+				isCopy 		= false,
+				currEvent 	= watchers[event] || [],
+				evtLen		= currEvent.length;
 			// check for duplicates
-			for(var i=0, loopcount=currEvent.length; i<loopcount; i++){
+			for(var i=0, loopcount=evtLen; i<loopcount; i++){
 				whichWatcher = currEvent[i];
 				if(whichWatcher.callback === callback) {
 					isCopy = true;
@@ -41,13 +42,15 @@
 	    },
 	    _removeWatcher		= function(event, id) {
 			var whichWatcher,
-				isRemoved = false,
-				currEvent = watchers[event] || [];
-			for(var i=0, loopcount=currEvent.length; i<loopcount; i++){
+				isRemoved 	= false,
+				currEvent 	= watchers[event] || [],
+				evtLen		= currEvent.length;
+			for(var i=0, loopcount=evtLen; i<loopcount; i++){
 				whichWatcher = currEvent[i];
 				if(whichWatcher.id == id) {
 					currEvent.splice(i, 1);
 					isRemoved = true;
+					break; // jump out once/if ID is found
 				}
 			}
 			return isRemoved;
@@ -59,6 +62,7 @@
 			var whichEvent = watchers[event];
 			if(whichEvent){
 /*
+				// if whichEvent then $.each
 				whichEvent && $.each(whichEvent, function() {
 					this.callback.call($, data);
 				});
