@@ -32,59 +32,59 @@ The watcher plugin runs as a singleton so every call (listed below) gets wrapped
 The signature for every call is as follows:
 `$.watcher(action, event, handler/data);`
 
-**Parameters**
+###### Parameters
 
 -   `action` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type of action to execute on the $.watcher plugin
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type (name) of event
 -   `handler` *[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)* : (**Subscribe Only**) Function to call or execute when the event being watched is published
 -   `data` *[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)* : (**Publish Only**) A collection of key/value pairs to be passed along to any subscribers of the event
-
+___
 #### getWatchers
 
 Get a reference to all subscribers of a specific event. 
 
-**Parameters**
+###### Parameters
 
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type (name) of event to watch
 
-**Returns**
+###### Returns
 
 -   `watchers` *[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)* : An array of references to subscribers to the specified event
-
+___
 #### publish
 
 Broadcast an event to all subscribers
 
-**Parameters**
+###### Parameters
 
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type of event to unregister `handler` from, or `"*"`
 -   `data` *[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)* : A collection of key/value pairs to be passed along to any subscribers of the event
-
+___
 #### subscribe
 
 Listens for an event to be broadcast and executes a handler (callback) method
 Will also receive a results object allowing for additional parameters to be passed from the broadcaster
 
-**Parameters**
+###### Parameters
 
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type (name) of event to watch
 -   `handler` *[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)* : Function to call or execute when the event being watched is published
-
+___
 #### unsubscribe
 
 Removes a specific watcher from an event subscription
 *This is good practice to do when the subscription is no longer needed to mark for garbage cleanup*
 
-**Parameters**
+###### Parameters
 
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type (name) of event to unsunscribe from
 -   `reference` **\[Any]** : A variable reference to whatever was used when setting up the watcher initially
-
+___
 #### unsubscribeAll
 
 Removes all watchers from an event subscription
 *This is good practice to do when the event is no longer needed to mark all watchers for garbage cleanup*
 
-**Parameters**
+###### Parameters
 
 -   `event` *[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)* : Type (name) of event to remove subscribers from
