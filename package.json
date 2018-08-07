@@ -1,0 +1,20 @@
+{
+  "name": "watcher-pubsub",
+  "version": "1.0.0",
+  "description": "A small (~400 bytes gzipped) Pub/Sub plugin for implementing broadcasters in jQuery",
+  "main": "watcher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davegillem/watcher-pubsub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davegillem/watcher-pubsub/issues"
+  },
+  "homepage": "https://github.com/davegillem/watcher-pubsub#readme"
+}
